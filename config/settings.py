@@ -32,9 +32,9 @@ def get_secret(setting, secrets=secrets):  # 예외 처리를 통해 오류 발�
     try:
         return secrets[setting]
     except KeyError:
-        error_msg = "Set the {} environment variable".format(setting)
+        pass
+        # error_msg = "Set the {} environment variable".format(setting)
         # raise ImproperlyConfigured(error_msg)
-        raise print(error_msg)
 
 
 SECRET_KEY = get_secret("SECRET_KEY")
