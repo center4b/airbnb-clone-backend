@@ -33,7 +33,8 @@ def get_secret(setting, secrets=secrets):  # 예외 처리를 통해 오류 발�
         return secrets[setting]
     except KeyError:
         error_msg = "Set the {} environment variable".format(setting)
-        raise ImproperlyConfigured(error_msg)
+        # raise ImproperlyConfigured(error_msg)
+        raise print(error_msg)
 
 
 SECRET_KEY = get_secret("SECRET_KEY")
@@ -45,6 +46,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+THIRD_PARTY_APPS = [
+    "rest_framework",
+]
 
 CUSTOM_APPS = [
     "common.apps.CommonConfig",
@@ -68,7 +72,7 @@ SYSTEM_APPS = [
     "django.contrib.staticfiles",
 ]
 
-INSTALLED_APPS = CUSTOM_APPS + SYSTEM_APPS
+INSTALLED_APPS = SYSTEM_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
