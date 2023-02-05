@@ -1,0 +1,36 @@
+{
+  "name": "House created with DRF",
+  "country": "한국",
+  "city": "서울",
+  "price": 1000,
+  "rooms": 2,
+  "toilets": 2,
+  "category": {
+    "name": "lalalal",
+    "kind": "rooms"
+  },
+  "amenities": [
+    {
+      "name": "lalalal",
+      "description": "lalalalala"
+    }
+  ],
+  "description": "DRF is greate",
+  "address": "123",
+  "pet_friendly": true,
+  "kind": "private_room"
+}
+
+{
+    "name": "House created with DRF",
+    "country": "한국",
+    "city": "서울",
+    "price": 1000,
+    "rooms": 2,
+    "toilets": 2,
+    "description": "DRF is greate",
+    "address": "123",
+    "pet_friendly": true,
+    "kind": "private_room"
+  }
+  
